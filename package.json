@@ -1,5 +1,5 @@
 {
-  "name": "node-js-getting-started",
+  "name": "lovlood",
   "version": "0.2.6",
   "description": "A sample Node.js app using Express 4",
   "engines": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heroku/node-js-getting-started.git"
+    "url": "git+https://github.com/secjong/lovlood.git"
   },
   "keywords": [
     "node",
@@ -25,9 +25,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heroku/node-js-getting-started/issues"
+    "url": "https://git.heroku.com/lovlood/issues"
   },
-  "homepage": "https://github.com/heroku/node-js-getting-started#readme",
+  "homepage": "https://git.heroku.com/lovlood#readme",
   "devDependencies": {},
   "author": ""
 }
