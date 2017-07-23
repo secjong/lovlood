@@ -1,5 +1,13 @@
 var express = require('express');
+var mysql = require('mysql');
 var app = express();
+
+var connection = mysql.createConnection({
+    host: "us-cdbr-iron-east-03.cleardb.net",
+    user: "b87227934b8a56",
+    password: "abfb9e2c",
+    database: "heroku_2d84f59619909f8"
+});
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -19,6 +27,16 @@ app.get('/times', function(request, response) {
     for (i=0; i < times; i++)
       result += i + ' ';
   response.send(result);
+});
+
+app.get('/db', function(req, res){
+    connection.query("SELECT * FROM test_table", function(err, result, fields){
+        if(err){
+            console.log("ERROR : " , err);
+            throw err;
+        }
+        res.send(["hello clearDB", result]);
+    });
 });
 
 app.listen(app.get('port'), function() {
